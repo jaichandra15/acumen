@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 3%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 3%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 0 0% 100%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 0 0% 13%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 13%;
+  --muted-foreground: 0 0% 63.9%;
+  --accent: 0 0% 13%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 13%;
+  --input: 0 0% 13%;
+  --ring: 0 0% 83.9%;
+
+  /* Purple gradient colors */
+  --purple-dark: 270 50% 10%;
+  --purple-medium: 270 70% 30%;
+  --purple-light: 270 100% 60%;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
+  background: linear-gradient(135deg, hsl(270, 50%, 5%) 0%, black 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Add gradient text utility class */
+.gradient-text {
+  background: linear-gradient(to right, #c6a4ff, #9d4edd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Add purple glow effect */
+.purple-glow {
+  text-shadow: 0 0 15px rgba(157, 78, 221, 0.5), 0 0 30px rgba(157, 78, 221, 0.3);
+}
+
+/* Add gradient background utility classes */
+.bg-purple-gradient {
+  background: linear-gradient(135deg, hsl(270, 50%, 15%) 0%, hsl(270, 50%, 5%) 100%);
+}
+
+.bg-purple-radial {
+  background: radial-gradient(circle at center, hsl(270, 70%, 15%) 0%, hsl(270, 50%, 5%) 70%, black 100%);
+}
+
+/* Background image with purple overlay */
+.bg-image-purple {
+  position: relative;
+}
+
+.bg-image-purple::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(157, 78, 221, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bg-image-purple > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Z-index layers for parallax */
+.z-1 {
+  z-index: 1;
+}
+.z-2 {
+  z-index: 2;
+}
+.z-3 {
+  z-index: 3;
+}
+.z-4 {
+  z-index: 4;
+}
+.z-5 {
+  z-index: 5;
+}
+.z-6 {
+  z-index: 6;
+}
+
