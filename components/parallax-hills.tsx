@@ -12,10 +12,10 @@ export function ParallaxHills() {
 
 
   const hill1X = 0
-  const hill2X = useTransform(scrollYProgress, [0, 0.3], [0, -1500]) // Move right
-  const hill3X = useTransform(scrollYProgress, [0, 0.3], [0, 1200]) // Move left
-  const hill4X = useTransform(scrollYProgress, [0, 0.3], [0, -1200]) // Move right
-  const hill5X = useTransform(scrollYProgress, [0, 0.3], [0, 1000]) // Move left
+  const hill2X = useTransform(scrollYProgress, [0, 0.3], [0, -1500]) // Move left
+  const hill3X = useTransform(scrollYProgress, [0, 0.3], [0, 1200]) // Move right
+  const hill4X = useTransform(scrollYProgress, [0, 0.3], [0, -1200]) // Move left
+  const hill5X = useTransform(scrollYProgress, [0, 0.3], [0, 1000]) // Move right
 
   // Opacity transforms for smooth transition
   const hillsOpacity = useTransform(scrollYProgress, [0, 0.1, 0.3], [1, 0.8, 0])
